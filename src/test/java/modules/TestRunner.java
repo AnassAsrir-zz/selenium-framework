@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         strict = true,
         plugin = {"pretty", "json:target/json/results.json"},
         features = {"src/test/resources/features"},
-        glue = {"step_definition"},
+        glue = {"modules","step_definition"},
         tags = {""}
 )
 
