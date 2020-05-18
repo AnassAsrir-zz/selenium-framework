@@ -4,18 +4,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import static modules.Hooks.driver;
 import static org.junit.Assert.assertTrue;
 
 public class GoogleSearchStepDefinition {
-    WebDriver driver;
 
     @Given("I open google search page")
     public void iOpenGoogleSearchPage() {
-        System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
-        driver = new ChromeDriver();
         driver.get("https://www.google.com/");
     }
 
@@ -29,6 +25,5 @@ public class GoogleSearchStepDefinition {
     @Then("search results display the word {string}")
     public void searchResultsDisplayTheWord(String arg0) {
         assertTrue(driver.getTitle().contains(arg0));
-        driver.quit();
     }
 }
