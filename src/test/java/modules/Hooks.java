@@ -7,14 +7,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import page_objects.GoogleSearchPage;
 
+import static utils.BrowserFactory.getFactoryDriver;
+
 public class Hooks {
     public static WebDriver driver;
     private GoogleSearchPage googleSearchPageObject = new GoogleSearchPage();
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = getFactoryDriver();
         PageFactory.initElements(driver, googleSearchPageObject);
     }
 
