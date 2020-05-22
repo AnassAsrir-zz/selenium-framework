@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.HashMap;
@@ -31,6 +32,8 @@ public class BrowserFactory {
                 factoryDriver = new InternetExplorerDriver();
                 break;
             case "firefox":
+                System.setProperty("webdriver.gecko.driver", driversPath + "geckodriver.exe");
+                factoryDriver = new FirefoxDriver();
                 break;
             default:
                 break;
