@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.HashMap;
 
@@ -13,9 +14,10 @@ public class BrowserFactory {
     static boolean headless = Boolean.parseBoolean(configurationMap.get("isheadless"));
 
     public static WebDriver getFactoryDriver() {
+        String driversPath = "src/test/resources/drivers/";
         switch (webBrowserType) {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", driversPath + "chromedriver.exe");
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--start-maximized");
                 options.addArguments("--ignore-certificate-errors");
@@ -25,6 +27,8 @@ public class BrowserFactory {
                 factoryDriver = new ChromeDriver(options);
                 break;
             case "ie":
+                System.setProperty("webdriver.ie.driver", driversPath + "IEDriverServer.exe");
+                factoryDriver = new InternetExplorerDriver();
                 break;
             case "firefox":
                 break;
