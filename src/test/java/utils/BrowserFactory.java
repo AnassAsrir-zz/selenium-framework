@@ -39,6 +39,8 @@ public class BrowserFactory {
             case "edge-legacy":
                 factoryDriver = new EdgeDriver();
             default:
+                System.setProperty("webdriver.chrome.driver", driversPath + "chromedriver.exe");
+                factoryDriver = new ChromeDriver();
                 break;
         }
         return factoryDriver;
