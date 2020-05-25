@@ -11,9 +11,9 @@ import java.util.HashMap;
 
 public class BrowserFactory {
     static WebDriver factoryDriver;
-    private static HashMap<String, String> configurationMap = PropertiesFile.read("src/test/resources/environnement/config.properties");
+    private static HashMap<String, String> configurationMap = PropertiesFile.read("src/test/resources/environment/config.properties");
     static String webBrowserType = configurationMap.get("browser");
-    static boolean headless = Boolean.parseBoolean(configurationMap.get("isheadless"));
+    static boolean headless = Boolean.parseBoolean(configurationMap.get("isHeadless"));
 
     public static WebDriver getFactoryDriver() {
         String driversPath = "src/test/resources/drivers/";
@@ -37,6 +37,7 @@ public class BrowserFactory {
                 factoryDriver = new FirefoxDriver();
                 break;
             case "edge-legacy":
+                //obsolete
                 factoryDriver = new EdgeDriver();
             default:
                 System.setProperty("webdriver.chrome.driver", driversPath + "chromedriver.exe");
