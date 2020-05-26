@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static modules.Hooks.driver;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static page_objects.GoogleSearchPage.searchFor;
 
@@ -22,6 +23,6 @@ public class GoogleSearchStepDefinition {
 
     @Then("search results display the word {string}")
     public void searchResultsDisplayTheWord(String arg0) {
-        assertTrue(driver.getTitle().contains(arg0));
+        assertEquals(arg0 + " - Recherche Google", driver.getTitle());
     }
 }
