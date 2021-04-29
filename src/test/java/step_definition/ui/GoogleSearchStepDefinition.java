@@ -3,6 +3,8 @@ package step_definition.ui;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import static modules.Hooks.driver;
 import static org.junit.Assert.assertEquals;
@@ -14,6 +16,13 @@ public class GoogleSearchStepDefinition {
     @Given("I open google search page")
     public void iOpenGoogleSearchPage() {
         driver.get("https://www.google.com/");
+        try {
+            WebElement securityPopUp = driver.findElement(By.id("zV9nZe"));
+            if(securityPopUp.isDisplayed() && securityPopUp.isEnabled()) {
+                securityPopUp.click();
+            }
+        }
+        catch(Exception ignored) {}
     }
 
     @When("I lookup the word {string}")
