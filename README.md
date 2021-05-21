@@ -1,6 +1,7 @@
 # test-auto
 
-[![Build Status](http://localhost:8080/job/selenium-automation-framework/badge/icon?style=flat-square&subject=build&status=stable&color=darkturquoise)(http://localhost:8080/job/selenium-automation-framework/)
+[![Build Status](http://localhost:8080/job/selenium-automation-framework/badge/icon?style=flat-square&subject=build&status=stable&color=darkturquoise)]
+(http://localhost:8080/job/selenium-automation-framework/)
 
 
 ## Description
