@@ -1,6 +1,6 @@
 # test-auto
 
-[![Build Status](http://localhost:8080/buildStatus/icon?job=test-auto)](http://localhost:8080/job/test-auto/)  
+[![Build Status](http://localhost:8080/buildStatus/icon?job=selenium-automation-framework)](http://localhost:8080/job/selenium-automation-framework/) 
 > Build status shows unstable, as this project is used for Demo purposes and includes a failing test case. 
 
 ## Description
