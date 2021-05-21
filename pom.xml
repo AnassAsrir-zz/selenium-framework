@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.framework</groupId>
-  <artifactId>test-auto</artifactId>
+  <artifactId>selenium-framework</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>test-auto</name>
+  <name>selenium-framework</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 

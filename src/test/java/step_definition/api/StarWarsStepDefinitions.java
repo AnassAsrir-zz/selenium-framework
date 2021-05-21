@@ -6,7 +6,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 
-import static modules.endpoints.People.getPeople;
+import static modules.endpoints.People.
+        getPeople;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
