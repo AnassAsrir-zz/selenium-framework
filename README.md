@@ -1,7 +1,7 @@
 # test-auto
 
-[![Build Status](http://localhost:8080/buildStatus/icon?job=selenium-automation-framework)](http://localhost:8080/job/selenium-automation-framework/) 
-> Build status shows unstable, as this project is used for Demo purposes and includes a failing test case. 
+[![Build Status](http://localhost:8080/job/selenium-automation-framework/badge/icon?style=flat-square&subject=build&status=stable&color=darkturquoise)(http://localhost:8080/job/selenium-automation-framework/)
+
 
 ## Description
 This repo contains the result source code of [automation training (french)](https://www.youtube.com/watch?v=BrR5-HWPjwE&list=PL4BtVtsdnzadpYqpzXNrArRKXiG1MI6nH "Framework de tests automatisés") based on:
